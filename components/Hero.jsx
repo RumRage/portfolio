@@ -48,7 +48,10 @@ const Hero = () => {
               </Link>
             </div>
             {/* Redes sociales */}
-            <Socials />
+            <Socials
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+            />
           </div>
           {/* Imagen */}
           <div className="hidden xl:flex relative">
