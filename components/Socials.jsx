@@ -13,23 +13,23 @@ import {
 
 const icons = [
   {
-    path: "/",
+    path: "https://www.linkedin.com/in/claravillarruel",
     name: <RiLinkedinFill />,
   },
   {
-    path: "/",
+    path: "https://github.com/RumRage",
     name: <RiGithubFill />,
   },
   {
-    path: "/",
+    path: "https://wa.link/9swhob",
     name: <RiWhatsappFill />,
   },
   {
-    path: "/",
+    path: "https://www.facebook.com/rumragee/",
     name: <RiFacebookFill />,
   },
   {
-    path: "/",
+    path: "https://www.instagram.com/rum_rage/",
     name: <RiInstagramFill />,
   },
 ];
@@ -39,7 +39,7 @@ const Socials = ({ containerStyles, iconsStyles }) => {
     <div className={`${containerStyles}`}>
       {icons.map((icon, index) => {
         return (
-          <Link href={icon.path} key={index}>
+          <Link href={icon.path} key={index} target="_blank">
             <div className={`${iconsStyles}`}>{icon.name}</div>
           </Link>
         );
