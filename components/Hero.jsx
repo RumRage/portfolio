@@ -30,10 +30,8 @@ const Hero = () => {
             </div>
             <h1 className="h1 mb-4">Hola, mi nombre es Clara Villarruel</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Soy una persona proactiva, organizada y responsable, con buenas
-              relaciones interpersonales. Siempre tengo la mejor disposición
-              para la realización de mis labores. En búsqueda de mi primera
-              oportunidad laboral.
+              Soy estudiante de Desarrollo Web. En búsqueda de una nueva
+              oportunidad laboral en el mundo de la Programación.
             </p>
             {/* Botones */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">

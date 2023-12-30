@@ -80,7 +80,7 @@ const Projects = () => {
                   key={index}
                   value={category}
                   onClick={() => setCategory(category)}
-                  className="capitalize w-[172px] md:w-auto"
+                  className="capitalize w-[160px] md:w-auto"
                 >
                   {category}
                 </TabsTrigger>
