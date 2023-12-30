@@ -11,6 +11,10 @@ import {
   Calendar,
   Briefcase,
 } from "lucide-react";
+import { FaJs, FaReact, FaPhp, FaLaravel } from "react-icons/fa";
+import { TbBrandTailwind } from "react-icons/tb";
+import { SiNextdotjs, SiTypescript, SiExpress } from "react-icons/si";
+import { DiMysql } from "react-icons/di";
 
 // Componentes
 import MyImg from "./MyImg";
@@ -43,21 +47,55 @@ const infoData = [
   },
 ];
 
-const skillData = [
+const skillsData = [
   {
-    title: "skills",
+    title: "frontend",
     data: [
       {
-        name: "HTML, CSS",
+        icon: <FaJs size={20} />,
+        name: "Javascript",
       },
       {
-        name: "Front-end Developer",
+        icon: <FaReact size={20} />,
+        name: "React JS",
       },
       {
-        name: "Javascript, PHP",
+        icon: <TbBrandTailwind size={20} />,
+        name: "Tailwind CSS",
       },
       {
-        name: "Back-end Developer",
+        icon: <SiNextdotjs size={20} />,
+        name: "Next JS",
+      },
+
+      {
+        icon: <SiTypescript size={20} />,
+        name: "Typescript",
+      },
+    ],
+  },
+  {
+    title: "backend",
+    data: [
+      {
+        icon: <User2 size={20} />,
+        name: "Node JS",
+      },
+      {
+        icon: <SiExpress size={20} />,
+        name: "Express",
+      },
+      {
+        icon: <FaPhp size={20} />,
+        name: "PHP",
+      },
+      {
+        icon: <FaLaravel size={20} />,
+        name: "Laravel",
+      },
+      {
+        icon: <DiMysql size={20} />,
+        name: "MySQL",
       },
     ],
   },
@@ -68,13 +106,25 @@ const skillData = [
         imgPath: "/about/vscode.svg",
       },
       {
-        imgPath: "/about/figma.svg",
+        imgPath: "/about/github.svg",
       },
       {
-        imgPath: "/about/notion.svg",
+        imgPath: "/about/vercel.svg",
       },
       {
-        imgPath: "/about/wordpress.svg",
+        imgPath: "/about/material.svg",
+      },
+      {
+        imgPath: "/about/postman.svg",
+      },
+      {
+        imgPath: "/about/windows.svg",
+      },
+      {
+        imgPath: "/about/linux.svg",
+      },
+      {
+        imgPath: "/about/fonts.svg",
       },
     ],
   },
@@ -117,8 +167,7 @@ const educationData = [
       },
       {
         title: "Jóvenes Programadores: Javascript 1, 2 y 3",
-        description:
-          "Estructuras de Javascript, Programación orientada a objetos (POO) y Programación funcional",
+        description: "Estructuras de Javascript",
         years: "2021 - 2022",
       },
     ],
@@ -155,7 +204,7 @@ const experienceData = [
         years: "Enero 2022 - Marzo 2022",
       },
       {
-        title: "Auditora | Administrativa junior",
+        title: "Auditora | Administrativa",
         company: "Drugstrore y Agencia de cobros Ripsa GyG",
         years: "Diciembre 2019 - Diciembre 2020",
       },
@@ -183,8 +232,7 @@ const About = () => {
           {/* Imagen */}
           <div className="hidden xl:flex flex-1 relative">
             <MyImg
-              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] 
-                    h-[505px] bg-no-repeat relative"
+              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[510px] h-[462px] bg-no-repeat relative"
               imgSrc="/about/about.png"
             />
           </div>
@@ -210,12 +258,10 @@ const About = () => {
                 {/* Personal */}
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-4">
-                      Estudiante de Desarrollo Web Front-End
-                    </h3>
+                    <h3 className="h3 mb-4">Desarrolladora Web Front-end</h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                      Estudiante de programación web de manera autodidacta hace
-                      casi 3 años.
+                      Estudiante de Programación Web de forma autodidacta hace 3
+                      años. Camino a Full-Stack! 🤞
                     </p>
                     {/* Iconos */}
                     <div className="grid xl:grid-cols-2 gap-3 mb-12">
@@ -242,53 +288,88 @@ const About = () => {
 
                 {/* Sección SKills */}
                 <TabsContent value="skills">
-                  <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-8">Mis Skills</h3>
-                    {/* Skills */}
-                    <div className="mb-16">
-                      <h4 className="text-xl font-semibold mb-2">
-                        Lenguajes de programación
-                      </h4>
-                      <div className="border-b border-border mb-4"></div>
+                  <div>
+                    <h3 className="h3 mb-8 text-center xl:text-left">
+                      {" "}
+                      Mis skills
+                    </h3>
+
+                    {/* Wrapper */}
+                    <div className="grid md:grid-cols-2 gap-y-8">
                       {/* Lista de Skills */}
-                      <div>
-                        {getData(skillData, "skills").data.map(
-                          (item, index) => {
-                            const { name } = item;
-                            return (
-                              <div
-                                key={index}
-                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
-                              >
-                                <div className="font-medium">{name}</div>
-                              </div>
-                            );
-                          }
-                        )}
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <h4 className="capitalize font-medium">
+                            {getData(skillsData, "frontend").title}
+                          </h4>
+                        </div>
+                        {/* Front-end */}
+                        <div className="flex flex-col gap-y-8">
+                          {getData(skillsData, "frontend").data.map(
+                            (item, index) => {
+                              return (
+                                <div
+                                  key={index}
+                                  className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                                >
+                                  <div>{item.icon}</div>
+                                  <div>{item.name}</div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Lista de Skills */}
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <h4 className="capitalize font-medium">
+                            {getData(skillsData, "backend").title}
+                          </h4>
+                        </div>
+                        {/* Front-end */}
+                        <div className="flex flex-col gap-y-8">
+                          {getData(skillsData, "backend").data.map(
+                            (item, index) => {
+                              return (
+                                <div
+                                  key={index}
+                                  className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                                >
+                                  <div>{item.icon}</div>
+                                  <div>{item.name}</div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
                       </div>
                     </div>
                     {/* Tools */}
-                    <div>
+                    <div className="mt-10">
                       <h4 className="text-xl font-semibold mb-2 xl:text-left">
-                        Herramientas
+                        Otras herramientas
                       </h4>
                       <div className="border-b border-border mb-4"></div>
                       {/* Lista Tools */}
                       <div className="flex gap-x-8 justify-center xl:justify-start">
-                        {getData(skillData, "tools").data.map((item, index) => {
-                          const { imgPath } = item;
-                          return (
-                            <div key={index}>
-                              <Image
-                                src={imgPath}
-                                width={48}
-                                height={48}
-                                alt="Tools"
-                                priority
-                              />
-                            </div>
-                          );
-                        })}
+                        {getData(skillsData, "tools").data.map(
+                          (item, index) => {
+                            const { imgPath } = item;
+                            return (
+                              <div key={index}>
+                                <Image
+                                  src={imgPath}
+                                  width={48}
+                                  height={48}
+                                  alt="Tools"
+                                  priority
+                                />
+                              </div>
+                            );
+                          }
+                        )}
                       </div>
                     </div>
                   </div>
