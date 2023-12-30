@@ -73,14 +73,14 @@ const Projects = () => {
 
         {/* Tabs */}
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
-          <TabsList>
+          <TabsList className="w-full grid h-full md:grid-cols-3 lg:max-w-[600px] mb-12 mx-auto md:border dark:border-none">
             {categories.map((category, index) => {
               return (
                 <TabsTrigger
                   key={index}
                   value={category}
                   onClick={() => setCategory(category)}
-                  className="capitalize w-[160px] md:w-auto"
+                  className="capitalize w-[172px] md:w-auto"
                 >
                   {category}
                 </TabsTrigger>
