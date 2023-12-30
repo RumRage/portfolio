@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CountUp from "react-countup";
 
 //Iconos
 import {
@@ -281,7 +284,10 @@ const About = () => {
                     <div className="flex flex-col gap-y-2">
                       <div className="text-primary">Lenguajes</div>
                       <div className="border-b border-border"></div>
-                      <div>Español nativo, Inglés C-1</div>
+                      <div className="flex flex-row items-center justify-evenly">
+                        <h4 className="h4 mt-2">Español: Nativo</h4>
+                        <h4 className="h4 mt-2">Inglés: C-1</h4>
+                      </div>
                     </div>
                   </div>
                 </TabsContent>
