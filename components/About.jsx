@@ -282,7 +282,9 @@ const About = () => {
                     </div>
                     {/* Lenguajes */}
                     <div className="flex flex-col gap-y-2">
-                      <div className="text-primary">Lenguajes</div>
+                      <div className="text-primary text-[22px] text-center">
+                        Lenguajes
+                      </div>
                       <div className="border-b border-border"></div>
                       <div className="flex flex-row items-center justify-evenly">
                         <h4 className="h4 mt-2">Español: Nativo</h4>

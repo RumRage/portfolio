@@ -53,7 +53,7 @@ const Hero = () => {
             {/* Redes sociales */}
             <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"
-              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+              iconsStyles="text-foreground text-[30px] hover:text-primary transition-all"
             />
           </div>
           {/* Imagen */}
